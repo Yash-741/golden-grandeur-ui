@@ -1,7 +1,48 @@
+import { FormEvent, useState } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { toast } from "@/components/ui/use-toast";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const { name, email, phone, message } = formData;
+    if (!name.trim() || !phone.trim() || !message.trim()) {
+      toast({
+        title: "Missing details",
+        description: "Please add your name, phone number, and event details before sending.",
+      });
+      return;
+    }
+
+    const subject = encodeURIComponent(`Banquet Hall Inquiry from ${name.trim()}`);
+    const body = encodeURIComponent(
+      [
+        `Name: ${name.trim()}`,
+        `Email: ${email.trim() || "Not provided"}`,
+        `Phone: ${phone.trim()}`,
+        "",
+        "Event details:",
+        message.trim(),
+      ].join("\n"),
+    );
+
+    window.open(`mailto:poojaribanqueth@gmail.com?subject=${subject}&body=${body}`, "_self");
+
+    toast({
+      title: "Inquiry ready",
+      description: "Your email app should open with the banquet inquiry details filled in.",
+    });
+  };
+
   return (
     <section id="contact" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
@@ -24,7 +65,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Phone</h3>
-                <p className="font-body text-muted-foreground">+91 95036 36866</p>
+                <a className="font-body text-muted-foreground hover:text-primary transition-colors" href="tel:+919503636866">
+                  +91 95036 36866
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -33,7 +76,12 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Email</h3>
-                <p className="font-body text-muted-foreground">poojaribanqueth@gmail.com</p>
+                <a
+                  className="font-body text-muted-foreground hover:text-primary transition-colors"
+                  href="mailto:poojaribanqueth@gmail.com"
+                >
+                  poojaribanqueth@gmail.com
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -42,7 +90,16 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Location</h3>
-                <p className="font-body text-muted-foreground">Shiv Poojari Colony, High Tension Road,<br />Pragati Nagar, Nalasopara East - 401209</p>
+                <a
+                  className="font-body text-muted-foreground hover:text-primary transition-colors"
+                  href="https://maps.app.goo.gl/tpKJLCi5AHhAFYhV7"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Shiv Poojari Colony, High Tension Road,
+                  <br />
+                  Pragati Nagar, Nalasopara East - 401209
+                </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -57,11 +114,13 @@ const ContactSection = () => {
           </div>
 
           {/* Form */}
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <input
                 type="text"
                 placeholder="Your Name"
+                value={formData.name}
+                onChange={(e) => setFormData((current) => ({ ...current, name: e.target.value }))}
                 className="w-full px-4 py-3 rounded-lg bg-card border border-gold/10 text-foreground font-body text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
               />
             </div>
@@ -69,6 +128,8 @@ const ContactSection = () => {
               <input
                 type="email"
                 placeholder="Your Email"
+                value={formData.email}
+                onChange={(e) => setFormData((current) => ({ ...current, email: e.target.value }))}
                 className="w-full px-4 py-3 rounded-lg bg-card border border-gold/10 text-foreground font-body text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
               />
             </div>
@@ -76,6 +137,8 @@ const ContactSection = () => {
               <input
                 type="tel"
                 placeholder="Phone Number"
+                value={formData.phone}
+                onChange={(e) => setFormData((current) => ({ ...current, phone: e.target.value }))}
                 className="w-full px-4 py-3 rounded-lg bg-card border border-gold/10 text-foreground font-body text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors"
               />
             </div>
@@ -83,6 +146,8 @@ const ContactSection = () => {
               <textarea
                 rows={4}
                 placeholder="Tell us about your event..."
+                value={formData.message}
+                onChange={(e) => setFormData((current) => ({ ...current, message: e.target.value }))}
                 className="w-full px-4 py-3 rounded-lg bg-card border border-gold/10 text-foreground font-body text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary/50 transition-colors resize-none"
               />
             </div>

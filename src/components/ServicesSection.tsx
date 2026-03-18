@@ -1,6 +1,6 @@
 import { Heart, Utensils, Users, Music } from "lucide-react";
 import venue4 from "@/assets/venue-4.jpeg";
-import venue2 from "@/assets/venue-2.jpeg";
+import catering1 from "@/assets/catering-1.jpeg";
 import venue8 from "@/assets/venue-8.jpeg";
 import venue1 from "@/assets/venue-1.jpeg";
 
@@ -15,7 +15,7 @@ const services = [
     icon: Utensils,
     title: "Gourmet Catering",
     description: "Delight your guests with an exquisite spread of cuisines prepared by our expert chefs with finest ingredients.",
-    image: venue2,
+    image: catering1,
   },
   {
     icon: Users,
@@ -26,7 +26,7 @@ const services = [
   {
     icon: Music,
     title: "Elegant Decor",
-    description: "Stunning floral arrangements, LED lighting, and bespoke décor themes tailored to your celebration.",
+    description: "Stunning floral arrangements, LED lighting, and bespoke decor themes tailored to your celebration.",
     image: venue1,
   },
 ];

@@ -1,10 +1,10 @@
 import { Star, MapPin, Users, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: Calendar, value: "10+", label: "Years of Excellence" },
-  { icon: Users, value: "5000+", label: "Events Hosted" },
-  { icon: Star, value: "500+", label: "Happy Families" },
-  { icon: MapPin, value: "1", label: "Stunning Venue" },
+  { icon: Calendar, value: "2021", label: "Established" },
+  { icon: Users, value: "100+", label: "Events Hosted" },
+  { icon: Star, value: "100+", label: "Happy Families" },
+  { icon: MapPin, value: "2", label: "Venues" },
 ];
 
 const AboutSection = () => {
@@ -23,7 +23,7 @@ const AboutSection = () => {
             <div className="w-24 h-[2px] bg-gradient-gold mb-8" />
             <p className="font-elegant text-lg text-foreground/70 leading-relaxed mb-6">
               Poojari Banquet Hall has been the premier destination for grand celebrations
-              and unforgettable events. Our sprawling venue features exquisite décor,
+              and unforgettable events. Our sprawling venue features exquisite decor,
               state-of-the-art lighting, and a warm ambiance that transforms every occasion
               into a fairy tale.
             </p>

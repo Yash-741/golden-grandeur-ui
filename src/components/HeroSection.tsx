@@ -21,27 +21,35 @@ const HeroSection = () => {
         <p className="font-elegant text-lg md:text-xl tracking-[0.3em] uppercase text-primary/80 mb-4 animate-fade-in-up">
           Where Dreams Come to Life
         </p>
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+        <h1
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in-up"
+          style={{ animationDelay: "0.2s" }}
+        >
           <span className="text-gradient-gold">Poojari</span>
           <br />
           <span className="text-foreground">Banquet Hall</span>
         </h1>
-        <p className="font-elegant text-xl md:text-2xl text-foreground/70 max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-          An exquisite venue for weddings, receptions, and celebrations — crafted with elegance and grandeur
+        <p
+          className="font-elegant text-xl md:text-2xl text-foreground/70 max-w-2xl mx-auto mb-10 animate-fade-in-up"
+          style={{ animationDelay: "0.4s" }}
+        >
+          An exquisite venue for weddings, receptions, and celebrations - crafted with elegance and grandeur
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
           <Button
+            asChild
             size="lg"
             className="bg-gradient-gold text-primary-foreground font-body text-sm tracking-widest uppercase px-10 py-6 hover:opacity-90 transition-opacity shadow-gold"
           >
-            Explore Our Venue
+            <a href="#gallery">Explore Our Venue</a>
           </Button>
           <Button
+            asChild
             size="lg"
             variant="outline"
             className="border-primary/30 text-primary font-body text-sm tracking-widest uppercase px-10 py-6 hover:bg-primary/10 transition-colors"
           >
-            Plan Your Event
+            <a href="#contact">Plan Your Event</a>
           </Button>
         </div>
       </div>

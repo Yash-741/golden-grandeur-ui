@@ -2,14 +2,14 @@ import { useState, useRef } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 const videos = [
-  { src: "/videos/video-1.mp4", title: "Grand Wedding Setup" },
-  { src: "/videos/video-2.mp4", title: "Floral Decorations" },
-  { src: "/videos/video-3.mp4", title: "Stage & Lighting" },
-  { src: "/videos/video-4.mp4", title: "Venue Walkthrough" },
-  { src: "/videos/video-5.mp4", title: "Event Ambiance" },
-  { src: "/videos/video-6.mp4", title: "Reception Setup" },
-  { src: "/videos/video-7.mp4", title: "Décor Highlights" },
-  { src: "/videos/video-8.mp4", title: "Celebration Moments" },
+  { src: "/videos/video-1.mp4", title: "Catering Setup" },
+  { src: "/videos/video-2.mp4", title: "Floral Backdrop" },
+  { src: "/videos/video-3.mp4", title: "Grand Entrance" },
+  { src: "/videos/video-4.mp4", title: "Light Tunnel Walkthrough" },
+  { src: "/videos/video-5.mp4", title: "Wedding Stage" },
+  { src: "/videos/video-6.mp4", title: "Entrance Reveal" },
+  { src: "/videos/video-7.mp4", title: "Seating & Stage View" },
+  { src: "/videos/video-8.mp4", title: "Hall Decor View" },
 ];
 
 const VideoCard = ({ src, title }: { src: string; title: string }) => {

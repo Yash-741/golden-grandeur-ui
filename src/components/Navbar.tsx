@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpeg";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,8 +30,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#home" className="font-display text-2xl md:text-3xl font-bold text-gradient-gold">
-          Poojari Banquet Hall
+        <a href="#home" className="flex items-center">
+          <img
+            src={logo}
+            alt="Poojari Banquet Hall logo"
+            className="h-14 w-auto rounded-md object-contain md:h-16"
+          />
         </a>
 
         {/* Desktop nav */}
@@ -44,17 +49,19 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button className="bg-gradient-gold text-primary-foreground font-body text-sm tracking-wider uppercase hover:opacity-90 transition-opacity">
-            <Phone className="w-4 h-4 mr-2" />
-            Book Now
+          <Button
+            asChild
+            className="bg-gradient-gold text-primary-foreground font-body text-sm tracking-wider uppercase hover:opacity-90 transition-opacity"
+          >
+            <a href="#contact">
+              <Phone className="w-4 h-4 mr-2" />
+              Book Now
+            </a>
           </Button>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
+        <button className="md:hidden text-foreground" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
@@ -73,9 +80,14 @@ const Navbar = () => {
             </a>
           ))}
           <div className="px-6 pt-2">
-            <Button className="w-full bg-gradient-gold text-primary-foreground font-body text-sm tracking-wider uppercase">
-              <Phone className="w-4 h-4 mr-2" />
-              Book Now
+            <Button
+              asChild
+              className="w-full bg-gradient-gold text-primary-foreground font-body text-sm tracking-wider uppercase"
+            >
+              <a href="#contact" onClick={() => setMenuOpen(false)}>
+                <Phone className="w-4 h-4 mr-2" />
+                Book Now
+              </a>
             </Button>
           </div>
         </div>

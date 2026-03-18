@@ -10,6 +10,8 @@ import venue7 from "@/assets/venue-7.jpeg";
 import venue8 from "@/assets/venue-8.jpeg";
 import venue9 from "@/assets/venue-9.jpeg";
 import venue10 from "@/assets/venue-10.jpeg";
+import venue11 from "@/assets/venue-11.jpeg";
+import venue13 from "@/assets/venue-13.jpeg";
 
 const images = [
   { src: venue7, alt: "Grand stage with floral arches and chandeliers" },
@@ -22,6 +24,8 @@ const images = [
   { src: venue3, alt: "Floral hexagon frame with colorful roses" },
   { src: venue2, alt: "Illuminated entrance with cherry blossom trees" },
   { src: venue8, alt: "Spacious venue hall with seating arrangement" },
+  { src: venue11, alt: "Wedding stage with floral arch and aisle seating" },
+  { src: venue13, alt: "Wide hall view with floral stage decor" },
 ];
 
 const GallerySection = () => {
