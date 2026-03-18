@@ -33,7 +33,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Email</h3>
-                <p className="font-body text-muted-foreground">info@poojaribanquet.com</p>
+                <p className="font-body text-muted-foreground">poojaribanqueth@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
