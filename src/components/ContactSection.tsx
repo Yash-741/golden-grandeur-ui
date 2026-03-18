@@ -24,7 +24,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Phone</h3>
-                <p className="font-body text-muted-foreground">+91 98765 43210</p>
+                <p className="font-body text-muted-foreground">+91 95036 36866</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
