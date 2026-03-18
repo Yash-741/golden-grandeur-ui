@@ -24,7 +24,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Phone</h3>
-                <p className="font-body text-muted-foreground">+91 98765 43210</p>
+                <p className="font-body text-muted-foreground">+91 95036 36866</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -33,7 +33,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Email</h3>
-                <p className="font-body text-muted-foreground">info@poojaribanquet.com</p>
+                <p className="font-body text-muted-foreground">poojaribanqueth@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display text-lg font-semibold text-foreground mb-1">Location</h3>
-                <p className="font-body text-muted-foreground">Poojari Banquet Hall, Main Road,<br />Your City, State - 000000</p>
+                <p className="font-body text-muted-foreground">Shiv Poojari Colony, High Tension Road,<br />Pragati Nagar, Nalasopara East - 401209</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
