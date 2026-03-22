@@ -22,15 +22,17 @@ const AboutSection = () => {
             </h2>
             <div className="w-24 h-[2px] bg-gradient-gold mb-8" />
             <p className="font-elegant text-lg text-foreground/70 leading-relaxed mb-6">
-              Poojari Banquet Hall has been the premier destination for grand celebrations
-              and unforgettable events. Our sprawling venue features exquisite decor,
-              state-of-the-art lighting, and a warm ambiance that transforms every occasion
-              into a fairy tale.
+              Poojari Banquet Hall stands as a distinguished destination for grand
+              celebrations and unforgettable occasions, where elegant interiors,
+              refined decor, and a warm, welcoming ambiance come together to create
+              truly memorable experiences.
             </p>
             <p className="font-elegant text-lg text-foreground/70 leading-relaxed mb-8">
-              From opulent weddings adorned with thousands of roses to sophisticated
-              corporate gatherings, our dedicated team ensures every detail is perfect.
-              We believe every celebration deserves nothing less than extraordinary.
+              Under the visionary leadership of owner Mr. Bhaskar P. Poojari, we are
+              committed to delivering heartfelt hospitality, impeccable service, and
+              exceptional attention to detail. From lavish weddings to sophisticated
+              corporate gatherings, every event is curated with care, grace, and a
+              promise of excellence that makes each celebration extraordinary.
             </p>
           </div>
 
